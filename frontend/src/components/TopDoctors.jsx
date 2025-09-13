@@ -7,8 +7,10 @@ const TopDoctors = () => {
     const {doctors}=useContext(AppContext)
   return (
     <div className='m-10 mt-40'>
-        <h1 className='text-black text-3xl font-bold text-center' >Top Doctors to Book</h1>
-        <p className='mt-5 mb-6 sm:w-1/2 text-center text-sm ml-70'>Simply browse through our extensive list of trusted doctors.</p>
+        <div className='flex justify-center items-center flex-col'>
+            <h1 className='text-black text-3xl font-bold text-center' >Top Doctors to Book</h1>
+        <p className='mt-5 mb-6 sm:w-1/2 ml-45  text-sm '>Simply browse through our extensive list of trusted doctors.</p>
+        </div>
         <div  className='grid grid-cols-5 gap-4'>
             {
                 doctors.slice(0,10).map((item,index)=>(
@@ -27,7 +29,9 @@ const TopDoctors = () => {
                 ))
             }
         </div>
-        <button onClick={()=>navigate('/doctors')} className='mt-11 cursor-pointer text-center mx-130 bg-gray-300 rounded-full py-2 px-10 '>More</button>
+        <div className='flex justify-center items-center'>
+            <button onClick={()=>navigate('/doctors')} className='mt-11 cursor-pointer text-center flex justify-center items-center bg-gray-300 rounded-full py-2 px-10 '>More</button>
+        </div>
     </div>
   )
 }
