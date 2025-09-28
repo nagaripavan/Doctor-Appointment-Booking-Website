@@ -9,9 +9,9 @@ const TopDoctors = () => {
     <div className='m-10 mt-40'>
         <div className='flex justify-center items-center flex-col'>
             <h1 className='text-black text-3xl font-bold text-center' >Top Doctors to Book</h1>
-        <p className='mt-5 mb-6 sm:w-1/2 ml-45  text-sm '>Simply browse through our extensive list of trusted doctors.</p>
+        <p className='mt-5 mb-6 sm:w-1/2 w-50 md:ml-45  text-sm '>Simply browse through our extensive list of trusted doctors.</p>
         </div>
-        <div  className='grid grid-cols-5 gap-4'>
+        <div  className='grid md:grid-cols-5 gap-4'>
             {
                 doctors.slice(0,10).map((item,index)=>(
                     <div onClick={()=>navigate(`/appointment/${item._id}`)} className='border border-blue-200 cursor-pointer rounded-2xl bg-[#EAEFFF] overflow-hidden hover:translate-y-[-10px] transition-all duration-500'>
