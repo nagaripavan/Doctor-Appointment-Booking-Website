@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: "/Doctor-Appointment-Booking-Website/",
-  plugins: [tailwindcss(),react()]
+  plugins: [tailwindcss(),react()],
+  base : process.env.VITE_BASE_PATH || "/",
 });
