@@ -19,7 +19,7 @@ const MyProfile = () => {
   const [isEdit,setIsEdit]=useState(false)
 
   return (
-    <div className='my-10'>
+    <div className='my-10 mx-5'>
       <div className='my-5'>
         <img className='w-full md:max-w-1/7 rounded-2xl' src={userData.image} alt="" />
       </div>
@@ -30,7 +30,7 @@ const MyProfile = () => {
           <p>{userData.name}</p>
         }
       </div>
-      <hr className='w-120 opacity-30' />
+      <hr className='md:w-120 opacity-30' />
       <div className='my-5'>
         <p className='text-gray-700 underline mb-4'>CONTACT INFORMATION</p>
         <p className='text-sm mb-2 flex'><span className='font-bold mr-3'>Email id:</span> 

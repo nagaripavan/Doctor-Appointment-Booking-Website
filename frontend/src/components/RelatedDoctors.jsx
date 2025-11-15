@@ -17,9 +17,9 @@ const RelatedDoctors = ({docId,speciality}) => {
     <div className='m-10 mt-15'>
         <div className='flex justify-center items-center flex-col'>
             <h1 className='text-black text-3xl font-bold text-center' >Related Doctors</h1>
-        <p className='mt-5 mb-6 sm:w-1/2 ml-45  text-sm '>Simply browse through our extensive list of trusted doctors.</p>
+        <p className='mt-5 mb-6 sm:w-1/2  text-center  text-sm '>Simply browse through our extensive list of trusted doctors.</p>
         </div>
-        <div  className='grid grid-cols-5 gap-4'>
+        <div  className='grid md:grid-cols-5 gap-4'>
             {
                 relDoc.slice(0,6).map((item,index)=>(
                     <div onClick={()=>{navigate(`/appointment/${item._id}`);scrollTo(0,0)}} className='border border-blue-200 cursor-pointer rounded-2xl bg-[#EAEFFF] overflow-hidden hover:translate-y-[-10px] transition-all duration-500'>
