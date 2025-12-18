@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import {assets} from '../assets/assets'
+import axios from 'axios'
+import { toast } from 'react-toastify'
+import { useContext } from 'react'
+import { AppContext } from '../context/AppContext'
+
 const MyProfile = () => {
+
+  const {backendUrl,token} = useContext(AppContext)
 
   const [userData,setUserData]=useState({
     name:'muthyam',
@@ -17,6 +24,39 @@ const MyProfile = () => {
   })
 
   const [isEdit,setIsEdit]=useState(false)
+
+
+  const updateProfile = async () => {
+    try {
+      const { data } = await axios.put(
+        backendUrl + '/api/user/update-profile',
+        {
+          name: userData.name,
+          phone: userData.phone,
+          address: userData.address,
+          gender: userData.gender,
+          dob: userData.dob
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      )
+
+      if (data.success) {
+        toast.success(data.message)
+        setIsEdit(false)
+      } else {
+        toast.error(data.message)
+      }
+
+    } catch (error) {
+      toast.error(error.response?.data?.message || error.message)
+    }
+  }
+
+
 
   return (
     <div className='my-10 mx-5'>
