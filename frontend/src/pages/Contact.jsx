@@ -16,10 +16,10 @@ const Contact = () => {
             <p>Suite 000, Washington, USA</p>
           </div>
           <div className='my-6 text-gray-600'>
-            <p>Tel: (000) 000-0000</p>
+            <p>Tel: +91 9705769466</p>
             <p>Email: nagari.pavan.03@gmail.com</p>
           </div>
-          <p className='text-xl text-gray-700 font-semibold'>CAREERS AT PRESCRIPTO</p>
+          <p className='text-xl text-gray-700 font-semibold'>CAREERS AT BookMyAppointment</p>
           <p className='my-5 text-gray-600 text-sm'>Learn more about our teams and job openings.</p>
           <button className='border border-black px-8 py-3 hover:bg-black hover:text-white transition duration-200 cursor-pointer text-sm'>Explore Jobs</button>
         </div>

@@ -7,18 +7,19 @@ import { AppContext } from '../context/AppContext';
 const Navbar = () => {
     const navigate=useNavigate();
 
-    const {token,setToken,userData} = useContext(AppContext)
+    const {token,setToken,userData,setUserData} = useContext(AppContext)
 
     const [showMenu,setShowMenu]=useState(false);
     
     const logout = ()=>{
-        setToken(false)
-        localStorage.removeItem('token')
+         setToken(null)
+        setUserData(null)
+        navigate('/login')
     }
 
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400  bg-white'>
-        <img onClick={()=>navigate('/')} className='w-1/4 md:w-1/6 cursor-pointer' src={assets.logo1} alt="logo" />
+        <img onClick={()=>navigate('/')} className='w-1/3 md:w-1/6 cursor-pointer' src={assets.logo} alt="logo" />
         <ul className='hidden md:flex items-start gap-5 font-medium'>
             <NavLink to='/'>
                 <li className='py-1'>HOME</li>
@@ -46,7 +47,7 @@ const Navbar = () => {
                     <div className='absolute top-2 right-0 pt-14 font-medium text-base z-20 text-gray-600 hidden group-hover:block'>
                         <div className='min-w-48 bg-stone-100 p-4 flex flex-col gap-4 '>
                             <p onClick={()=>navigate('/my-profile')} className='hover:text-black cursor-pointer'>My Profile</p>
-                            <p onClick={()=>navigate('/my-appointments')} className='hover:text-black cursor-pointer'>My Appointments</p>
+                            <p onClick={()=>navigate('/my-appointment')} className='hover:text-black cursor-pointer'>My Appointments</p>
                             <p onClick={logout} className='hover:text-black cursor-pointer'>Logout</p>
                         </div>
                     </div>

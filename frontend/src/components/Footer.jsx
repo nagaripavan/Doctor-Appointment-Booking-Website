@@ -7,8 +7,8 @@ const Footer = () => {
         <div className='flex flex-col gap-10 md:flex-row md:gap-35 mb-8 '>
             {/*------------Left section--------- */}
             <div className='w-1/2 '>
-                <img className='w-1/3  mb-5' src={assets.logo1} alt="" />
-                <p className='text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <img className='md:w-1/3  mb-5' src={assets.logo} alt="" />
+                <p className='text-sm'>BookMyAppointment helps you easily find doctors, book appointments, and manage your healthcare schedule online — anytime, anywhere.</p>
             </div>
 
             {/*------------center section--------- */}
@@ -25,7 +25,7 @@ const Footer = () => {
             {/*------------Right section--------- */}
             <div className=' pt-5'>
                 <h1 className='font-semibold text-l mb-2'>GET IN TOUCH</h1>
-                <p className='text-gray-600'>+919999999999</p>
+                <p className='text-gray-600'>+91 9705769466</p>
                 <p className='text-gray-600'>nagari.pavan.03@gmail.com</p>
             </div>
         </div>

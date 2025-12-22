@@ -10,10 +10,10 @@ const About = () => {
       <div className='flex flex-col md:flex-row  gap-8 my-10 mx-10'>
         <img className='w-full md:max-w-1/3 ' src={assets.about_image} alt="" />
         <div className='py-8 pr-15 text-gray-600 flex flex-col gap-5'>
-          <p>Welcome to Prescripto, your trusted partner in managing your healthcare needs conveniently and efficiently. At Prescripto, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.</p>
-          <p>Prescripto is committed to excellence in healthcare technology. We continuously strive to enhance our platform, integrating the latest advancements to improve user experience and deliver superior service. Whether you're booking your first appointment or managing ongoing care, Prescripto is here to support you every step of the way.</p>
+          <p>Welcome to BookMyAppointment, your trusted partner in managing your healthcare needs conveniently and efficiently. At BookMyAppointment, we understand the challenges individuals face when it comes to scheduling doctor appointments and managing their health records.</p>
+          <p>BookMyAppointment is committed to excellence in healthcare technology. We continuously strive to enhance our platform, integrating the latest advancements to improve user experience and deliver superior service. Whether you're booking your first appointment or managing ongoing care, BookMyAppointment is here to support you every step of the way.</p>
           <b>Our Vision</b>
-          <p>Our vision at Prescripto is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.</p>
+          <p>Our vision at BookMyAppointment is to create a seamless healthcare experience for every user. We aim to bridge the gap between patients and healthcare providers, making it easier for you to access the care you need, when you need it.</p>
         </div>
       </div>
       <div className='text-2xl mx-10'>

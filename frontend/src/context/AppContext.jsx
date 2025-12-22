@@ -10,10 +10,18 @@ const AppContextProvider = (props)=>{
     const currencySymbol='₹'
     const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [doctors,setDoctors] = useState([])
-    const [token,setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):false)
-    const [userData,setUserData] = useState(false)
+    const [token, setToken] = useState(() => localStorage.getItem('token'))
+    const [userData, setUserData] = useState(null)
     
-    
+    useEffect(() => {
+    if (token) {
+        localStorage.setItem('token', token)
+    } else {
+        localStorage.removeItem('token')
+        setUserData(null)
+    }
+    }, [token])
+
 
     const getDoctorsData = async() =>{
         try {

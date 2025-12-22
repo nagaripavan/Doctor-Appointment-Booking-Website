@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <div className='flex items-center justify-between text-sm  px-4 sm:px-10 py-3 border-b border-b-gray-400  bg-white'>
         <div className='flex items-center gap-2 text-xs'>
-            <img className='w-36 md:w-40 cursor-pointer' src={assets.logo1} alt="" />
+            <img className='w-36 md:w-50 cursor-pointer' src={assets.logo} alt="" />
             <p className=' border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-600'>{aToken?'Admin':'Doctor'}</p>
 
         </div>
