@@ -7,7 +7,7 @@ import { useEffect } from 'react'
 
 const MyAppointments = () => {
 
-  const {backendUrl,token} = useContext(AppContext)
+  const {backendUrl,token,getDoctorsData } = useContext(AppContext)
   const [appointments,setAppointments] = useState([])
   const months = ["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
@@ -47,6 +47,7 @@ const MyAppointments = () => {
       if (data.success) {
         toast.success(data.message)
         getUserAppointments()
+        getDoctorsData()
 
       } else {
         toast.error(data.message)
@@ -85,8 +86,9 @@ const MyAppointments = () => {
                 <p><span className='font-semibold mr-2'>Date & Time:</span>{slotDateFormat(item.slotDate)} | {item.slotTime}</p>
               </div>
               <div className='flex flex-col pt-5 md:pt-15 gap-3 md:ml-auto text-sm text-gray-600'>
-                <button className='border border-gray-300 py-2 px-15 hover:bg-[#5f6FFF] hover:text-white rounded-sm transition duration-200 cursor-pointer'>Pay Online</button>
-                {!item.cancelled &&                 <button onClick={()=>cancelAppointment(item._id)} className='border border-gray-300 py-2 px-15 hover:bg-red-700 hover:text-white rounded-sm transition duration-200 cursor-pointer'>Cancel Appointment</button>}
+                {!item.cancelled &&  <button className='border border-gray-300 py-2 px-15 hover:bg-[#5f6FFF] hover:text-white rounded-sm transition duration-200 cursor-pointer'>Pay Online</button>}
+                {!item.cancelled &&  <button onClick={()=>cancelAppointment(item._id)} className='border border-gray-300 py-2 px-15 hover:bg-red-700 hover:text-white rounded-sm transition duration-200 cursor-pointer'>Cancel Appointment</button>}
+                {item.cancelled && <button className='border border-gray-300 py-2 px-15 text-red-600 transition duration-200'>Appointment cancelled</button>}
               </div>
             </div>
             
