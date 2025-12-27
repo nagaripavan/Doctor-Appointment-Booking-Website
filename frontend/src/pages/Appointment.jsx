@@ -131,7 +131,7 @@ const Appointment = () => {
             <p className='font-semibold flex gap-2'>about <img src={assets.info_icon} alt="" /></p>
             <p className='mb-5 mt-3 text-sm max-w-full pr-5'>{docInfo.about}</p>
             <div className='flex gap-1 '>
-              <p className='text-gray-800'>Appointment fee:  </p><p className='font-semibold'>{currencySymbol}{docInfo.fees*4} </p>
+              <p className='text-gray-800'>Appointment fee:  </p><p className='font-semibold'>{currencySymbol}{docInfo.fees} </p>
             </div>
           </div>
         </div>
